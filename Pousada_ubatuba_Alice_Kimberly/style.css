@@ -1,0 +1,253 @@
+html {
+  scroll-behavior: smooth; 
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: black;
+  background-color: beige;
+}
+
+img {
+  max-width: 70%;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.botao {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 999px;              
+  font-weight: 800;
+  cursor: pointer;                  
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 2px 
+}
+
+.botao{
+  color: rgb(231, 180, 113);
+  box-shadow: 0 12px 24px rgba(255, 107, 74, 0.35);
+
+}
+
+.botao:hover {
+  transform: translateY(-3px) scale(1.03); 
+  box-shadow: 0 16px 30px rgba(255, 107, 74, 0.45);
+}
+
+.botao-contorno {
+  background: transparent;
+  color: black;
+  border: 2px;
+  border-color: black;
+}
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 500; 
+  background: rgba(122, 110, 50, 0.55);
+  backdrop-filter: blur(10px);
+  border-bottom: 3px solid rgba(79, 227, 209, 0.15);
+}
+
+.imgnavbar {
+    width: 120px;
+    align-items: center;
+}
+
+.navbar{
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;       
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+
+
+.navlinks {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+
+.inicio {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.hero-slides {
+  position: absolute;
+  inset: 0;                  
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-size: cover;
+  background-position: left;
+  opacity: 0;                            
+  transition: opacity 1.2s ease-in-out;   
+}
+
+
+.hero-slide.ativo {
+  opacity: 1;
+  z-index: 2;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: linear-gradient(180deg, rgba(4,28,44,0.55) 0%, rgba(4,28,44,0.35) 45%, rgba(4,28,44,0.85) 100%);
+}
+
+
+
+.hero-botoes {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  
+}
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);  
+  z-index: 5;
+  border-color: black;
+  border: 1px;
+  background-color: #e0dcb3;
+  color: black;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+ .slide-btn:hover {
+  background: var(--cor-aqua);
+  color: var(--cor-abismo);
+} 
+
+.slide-btn.prev { left: 24px; }
+.slide-btn.next { right: 24px; }
+
+.indicadores {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  gap: 10px;
+}
+
+.indicador {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: #e0dcb3;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.indicador.ativo {
+  background: var(--cor-aqua);
+  animation: pulsarBolha 1.8s ease-in-out infinite; 
+}
+
+
+.pousada{
+  background-color: beige;
+  justify-content: center;
+  padding: 25px
+  
+}
+
+.acomodacoes{
+  display: block;
+  align-items: baseline;
+  justify-content: space-between;  
+  gap: 20px;
+  border: 1px beige;
+  padding: 15px;
+  width: 80%;
+  background-color: beige;
+  margin: 100px;
+  
+}
+
+img{
+  width: 700px;
+}
+
+.turismo-card {
+    width: 400px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.turismo{
+  display: flex;
+  grid-template-columns: repeat(4, 2fr);
+  gap: 28px;
+}
+
+.turismo-card {
+  background: #fff;
+  border-radius: 25px;
+  overflow: hidden;         
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+
+
+.footer {
+  background: var(--cor-abismo);
+  color: rgba(234, 246, 246, 0.75);
+  padding-top: 72px;
+}
+
+
+
+
+
+
+
